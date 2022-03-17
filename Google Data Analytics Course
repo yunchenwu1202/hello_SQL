@@ -1,0 +1,84 @@
+#Process Data from Dirty to Clean - Week 3 - Cleaning String Variables using SQL
+
+SELECT 
+  customer_id 
+FROM
+  customer_data.customer_address
+  
+  
+#DISTINCT Function- Prevent duplicates
+  
+SELECT 
+  DISTINCT customer_id 
+FROM
+  customer_data.customer_address
+  
+#LENGTH (LEN) Function- Double-check if string variables are consistent
+
+SELECT
+  LENGTH(country) AS letters_in_country
+FROM
+  customer_data.customer_address
+  
+SELECT
+    country
+FROM
+    customer_data.customer_address
+WHERE
+  LENGTH(country)>2
+  
+  SUBSTR Function- 
+SELECT
+  customer_id
+FROM
+  customer_data.customer_address
+WHERE
+  SUBSTR(country,1,2)='US'
+  
+  
+Getting rid of duplicates
+
+SELECT
+  DISTINCT customer_id
+FROM
+  customer_data.customer_address
+WHERE
+  SUBSTR(country,1,2)='US'
+
+Double-check 
+
+SELECT
+ state
+FROM
+  customer_data.customer_address
+WHERE
+  LENGTH(state)>2
+  
+TRIM Function- 
+
+SELECT
+  DISTINCT customer_id
+FROM 
+  customer_data.customer_address
+WHERE
+  TRIM(state) = 'OH'
+  
+  
+SELECT customer_id, 
+  SUBSTR(country, 1, 3) AS new_country 
+FROM 
+  customer 
+ORDER BY 
+  country
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
