@@ -54,7 +54,7 @@ FROM
 WHERE
   LENGTH(state)>2
   
-TRIM Function- 
+#TRIM Function- 
 
 SELECT
   DISTINCT customer_id
@@ -72,9 +72,41 @@ ORDER BY
   country
   
   
+#CAST function- converting anything from one data type to another 
+
+SELECT
+  CAST(purchase_price AS FLOAT64)
+FROM
+  customer_data.customer_purchase
+ORDER BY
+  CAST(purchase_price AS FLOAT64 DESC
   
   
+SELECT
+  CAST(date AS date) AS date_only 
+FROM
+  customer_data.customer_purchase
+WHERE
+  date BETWEEN '2020-12-01' AND '2020-12-31'
   
+  
+#CONCAT Function- Adding strings together to create new text strings that can be used as unique keys 
+
+SELECT
+  CONCAT(product_code, prodcut_color) AS new_product_code
+FROM
+  customer_data.customer_purchase
+WHERE
+  product = 'couch'
+
+#COALESCE Function- Return non-null values in a list
+
+SELECT
+  COALESCE(product, product_code) AS product_info
+FROM 
+  customer_data.customer_purchase
+
+
 
 
 
