@@ -107,6 +107,21 @@ FROM
   customer_data.customer_purchase
 
 
+#CASE Function- 
+
+SELECT
+  customer_id, 
+  CASE 
+   WHEN first_name= 'Tnoy' THEN 'Tony'
+   WHEN first_name= 'Rahcel'THEN 'Rachel' 
+   ELSE first_name
+   END AS cleaned_name
+FROM 
+    customer_data.customer_name
+    
+
+##Changelog##
+Query history 
 
 
 
