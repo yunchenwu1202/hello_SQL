@@ -1,7 +1,7 @@
 # Analyze Data to Answer Questions - Week 4 - Common Calculation Formulas
 
 ## SUM Function - 
-``` 
+``` SQL
 SELECT
     Date, 
     small_bags,
@@ -11,7 +11,7 @@ SELECT
 FROM
     avocado_data.avocado_prices
 ```
-```
+```SQL
 SELECT 
     date, region, 
     total_bags, 
@@ -24,7 +24,7 @@ SELECT
 ```
 
 ## EXTRACT Function - 
-```
+```SQL
 SELECT
     Extract(YEAR FROM STARTTIME) AS year, 
     COUNT(*) AS number_of_rides
