@@ -1,12 +1,12 @@
 Step 1: Inspect the fuel_type column
-```
+```SQL
 SELECT
   DISTINCT fuel_type
 FROM
   cars.car_info;
  ``` 
 Step 2: Inspect the length column
-```
+```SQL
 SELECT
   MIN(length) AS min_length,
   MAX(length) AS max_length
@@ -14,7 +14,7 @@ FROM
   cars.car_info;
 ```
 Step 3: Fill the missing data
-```
+```SQL
 SELECT
   *
 FROM
@@ -25,7 +25,7 @@ WHERE
   num_of_doors IS NULL;
  ``` 
   ---------------------------------------
-  ```
+  ```SQL
   UPDATE
   cars.car_info
 SET
@@ -36,7 +36,7 @@ WHERE
   AND body_style = "sedan";
   ```
   ----------------------------------------
-  ```
+  ```SQL
   SELECT
   *
 FROM
@@ -48,14 +48,14 @@ WHERE
   ```
   
 Step 4: Identify potential errors 
-```
+```SQL
 SELECT
   DISTINCT num_of_cylinders
 FROM
   cars.car_info;
   ```
 --------------------------------------------
-```
+```SQL
 UPDATE
   cars.car_info
 SET
@@ -64,14 +64,14 @@ WHERE
   num_of_cylinders = "tow";
   ```
 --------------------------------------------
-```
+```SQL
 SELECT
   DISTINCT num_of_cylinders
 FROM
   cars.car_info;
   ```
 ---------------------------------------------
-  ```
+  ```SQL
 SELECT
   MIN(compression_ratio) AS min_compression_ratio,
   MAX(compression_ratio) AS max_compression_ratio
@@ -79,7 +79,7 @@ FROM
   cars.car_info;
   ```
 ---------------------------------------------
-```
+```SQL
 SELECT
   MIN(compression_ratio) AS min_compression_ratio,
   MAX(compression_ratio) AS max_compression_ratio
@@ -91,7 +91,7 @@ WHERE
   compression_ratio <> 70;
   ```
 ----------------------------------------------
-```
+```SQL
 DELETE cars.car_info
 
 WHERE compression_ratio = 70;
@@ -104,7 +104,7 @@ FROM
   cars.car_info;
 ```
 ----------------------------------------------
-```
+```SQL
 SELECT
   DISTINCT drive_wheels,
   LENGTH(drive_wheels) AS string_length
@@ -112,7 +112,7 @@ FROM
   cars.car_info;
 ```
 ----------------------------------------------
-```
+```SQL
 UPDATE
 
   cars.car_info
@@ -124,7 +124,7 @@ SET
 WHERE TRUE;
   ```
 -----------------------------------------------
-```
+```SQL
  SELECT
   DISTINCT drive_wheels
 FROM
