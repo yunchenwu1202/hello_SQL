@@ -1,6 +1,6 @@
 # Analyze Data to Answer Questions - Week 4 - Common Calculation Formulas
 
-## Sum Function - 
+## SUM Function - 
 1. SELECT
     Date, 
     small_bags,
