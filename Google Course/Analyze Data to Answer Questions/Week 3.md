@@ -77,7 +77,8 @@ WHERE
     )
 ```
   
-## HAVING Fuction - Allows you to add filter to your query instead of the underlying table that can only be used with aggregate functions
+## HAVING Fuction - 
+Allows you to add filter to your query instead of the underlying table that can only be used with aggregate functions
 ```SQL
 SELECT
   warehouse.warehouse_id, 
