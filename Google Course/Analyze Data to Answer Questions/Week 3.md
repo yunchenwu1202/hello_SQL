@@ -1,6 +1,6 @@
-#Analyze Data to Answer Questions - Week 3 - COUNT & COUNTD
+# Analyze Data to Answer Questions - Week 3 - COUNT & COUNTD
 
-#JOIN Function - 
+## JOIN Function - 
 
 SELECT 
   orders.*, 
@@ -11,7 +11,7 @@ FROM
 JOIN 
   warehouse_orders.wareohuse warehouse ON orders.warehouse_id = warehouse.warehouse_id
   
-#COUNT DISTINCT Function - 
+## COUNT DISTINCT Function - 
   
   SELECT 
   warehouse.state as state
@@ -35,7 +35,7 @@ SELECT
     AVG(num_bikes_available)
     FROM bigquery-public-data.new_york.citibike_stations ) AS avg_num_bikes_available
 FROM bigquery-public-data.new_york.citibike_stations
-------------------------------------------------------------------------------------- 
+
  
 SELECT
   station_id, name, number_of_rides AS number_of_rides_starting_at_station
@@ -55,7 +55,7 @@ INNER JOIN
  
 ORDER BY
   number_of_rides DESC
-------------------------------------------------------------------------------------- 
+
  
 SELECT
   station_id,
@@ -72,9 +72,9 @@ WHERE
     WHERE
       usertype = 'Subscriber'
     )
--------------------------------------------------------------------------------------
+
   
-# HAVING Fuction - Allows you to add filter to your query instead of the underlying table that can only be used with aggregate functions
+## HAVING Fuction - Allows you to add filter to your query instead of the underlying table that can only be used with aggregate functions
 
 SELECT
   warehouse.warehouse_id, 
