@@ -2,7 +2,7 @@
 
 ## JOIN Function - 
 
-```
+```SQL
 SELECT 
   orders.*, 
   warehouse.warehouse_alias,
@@ -15,7 +15,7 @@ JOIN
 
 ## COUNT DISTINCT Function - 
   
-```
+```SQL
 SELECT 
   warehouse.state as state
   COUNT (DISTINCT order_id) as num_orders
@@ -30,7 +30,7 @@ GOURP BY
   
   
 ## Subqueries
-```
+```SQL
 SELECT 
   station_id, 
   num_bike_available,
@@ -39,7 +39,7 @@ SELECT
     FROM bigquery-public-data.new_york.citibike_stations ) AS avg_num_bikes_available
 FROM bigquery-public-data.new_york.citibike_stations
 ```
-``` 
+``` SQL
 SELECT
   station_id, name, number_of_rides AS number_of_rides_starting_at_station
 FROM
@@ -59,7 +59,7 @@ INNER JOIN
 ORDER BY
   number_of_rides DESC
 ```
- ```
+ ```SQL
 SELECT
   station_id,
   name
@@ -78,7 +78,7 @@ WHERE
 ```
   
 ## HAVING Fuction - Allows you to add filter to your query instead of the underlying table that can only be used with aggregate functions
-```
+```SQL
 SELECT
   warehouse.warehouse_id, 
   CONCAT (warehouse.state, ':', warehouse_alias) AS warehouse_name,
