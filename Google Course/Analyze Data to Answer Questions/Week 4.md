@@ -1,25 +1,30 @@
 # Analyze Data to Answer Questions - Week 4 - Common Calculation Formulas
 
 ## SUM Function - 
-1. SELECT
+``` 
+SELECT
     Date, 
     small_bags,
     large_bags, 
     xlarge_bags, 
     small_bags + large_bags + xlarge_bags AS total_bags_calc
-   FROM
+FROM
     avocado_data.avocado_prices
-2. SELECT 
+```
+```
+SELECT 
     date, region, 
     total_bags, 
     small_bags,
     (small_bags/total_bags) *100 AS small_bags_percent
-   FROM
+ FROM
     avocado_data.avocado_prices
-   WHERE
+ WHERE
     total_bags <> 0
+```
 
 ## EXTRACT Function - 
+```
 SELECT
     Extract(YEAR FROM STARTTIME) AS year, 
     COUNT(*) AS number_of_rides
@@ -29,3 +34,4 @@ GROUP BY
     year
 ORDER BY 
     year
+```
