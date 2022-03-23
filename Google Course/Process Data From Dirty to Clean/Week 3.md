@@ -1,5 +1,5 @@
 # Process Data from Dirty to Clean - Week 3 - Cleaning String Variables using SQL
-```
+```SQL
 SELECT 
   customer_id 
 FROM
@@ -7,20 +7,20 @@ FROM
 ```  
   
 ## DISTINCT Function- Prevent duplicates
-```  
+```  SQL
 SELECT 
   DISTINCT customer_id 
 FROM
   customer_data.customer_address
 ```  
 ## LENGTH (LEN) Function- Double-check if string variables are consistent
-```
+```SQL
 SELECT
   LENGTH(country) AS letters_in_country
 FROM
   customer_data.customer_address
 ```
-```
+```SQL
 SELECT
     country
 FROM
@@ -29,7 +29,7 @@ WHERE
   LENGTH(country)>2
 ```  
   SUBSTR Function- 
-```
+```SQL
 SELECT
   customer_id
 FROM
@@ -39,7 +39,7 @@ WHERE
  ``` 
   
 ## Getting rid of duplicates
-```
+```SQL
 SELECT
   DISTINCT customer_id
 FROM
@@ -48,7 +48,7 @@ WHERE
   SUBSTR(country,1,2)='US'
 ```
 Double-check 
-```
+```SQL
 SELECT
  state
 FROM
@@ -57,7 +57,7 @@ WHERE
   LENGTH(state)>2
 ``` 
 ## TRIM Function- 
-```
+```SQL
 SELECT
   DISTINCT customer_id
 FROM 
@@ -65,7 +65,7 @@ FROM
 WHERE
   TRIM(state) = 'OH'
 ```  
-``` 
+``` SQL
 SELECT customer_id, 
   SUBSTR(country, 1, 3) AS new_country 
 FROM 
@@ -75,7 +75,7 @@ ORDER BY
 ```  
   
 ## CAST function- converting anything from one data type to another 
-```
+```SQL
 SELECT
   CAST(purchase_price AS FLOAT64)
 FROM
@@ -83,7 +83,7 @@ FROM
 ORDER BY
   CAST(purchase_price AS FLOAT64 DESC
 ```  
- ``` 
+ ``` SQL
 SELECT
   CAST(date AS date) AS date_only 
 FROM
@@ -93,7 +93,7 @@ WHERE
 ```  
   
 ## CONCAT Function- Adding strings together to create new text strings that can be used as unique keys 
-```
+```SQL
 SELECT
   CONCAT(product_code, prodcut_color) AS new_product_code
 FROM
@@ -102,7 +102,7 @@ WHERE
   product = 'couch'
 ```
 ## COALESCE Function- Return non-null values in a list
-```
+```SQL
 SELECT
   COALESCE(product, product_code) AS product_info
 FROM 
@@ -110,7 +110,7 @@ FROM
 ```
 
 ## CASE Function- 
-```
+```SQL
 SELECT
   customer_id, 
   CASE 
