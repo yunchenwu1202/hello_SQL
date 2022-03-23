@@ -61,7 +61,8 @@ SELECT
 ```SQL
 CREATE TABLE AfricaSales AS
 (
-SELECT *
+SELECT 
+    *
 FROM
     GlobalSales
 WHERE 
