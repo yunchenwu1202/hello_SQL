@@ -55,10 +55,27 @@ SELECT
     COUNT(*) AS cnt
  FROM
     trips_over_1_hr
-
-
 ```
 
+### CREATE TABLE Function - 
+```SQL
 
+```
+### SELECT INTO Function - 
+```SQL
+SELECT 
+    *
+INTO
+    AfricaSales
+FROM 
+    GlobalSales
+WHERE
+    Region = Africa
+```
+
+### CREATE TEMP TABLE Function - 
+```SQL
+
+```
 
 
