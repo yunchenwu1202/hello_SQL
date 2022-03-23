@@ -59,7 +59,14 @@ SELECT
 
 ### CREATE TABLE Function - 
 ```SQL
-
+CREATE TABLE AfricaSales AS
+(
+SELECT *
+FROM
+    GlobalSales
+WHERE 
+    Region = 'Africa'
+)
 ```
 ### SELECT INTO Function - 
 ```SQL
@@ -70,7 +77,7 @@ INTO
 FROM 
     GlobalSales
 WHERE
-    Region = Africa
+    Region = 'Africa'
 ```
 
 ### CREATE TEMP TABLE Function - 
