@@ -1,4 +1,4 @@
-#Process Data from Dirty to Clean - Week 3 - Cleaning String Variables using SQL
+# Process Data from Dirty to Clean - Week 3 - Cleaning String Variables using SQL
 
 SELECT 
   customer_id 
@@ -6,14 +6,14 @@ FROM
   customer_data.customer_address
   
   
-#DISTINCT Function- Prevent duplicates
+## DISTINCT Function- Prevent duplicates
   
 SELECT 
   DISTINCT customer_id 
 FROM
   customer_data.customer_address
   
-#LENGTH (LEN) Function- Double-check if string variables are consistent
+## LENGTH (LEN) Function- Double-check if string variables are consistent
 
 SELECT
   LENGTH(country) AS letters_in_country
@@ -36,7 +36,7 @@ WHERE
   SUBSTR(country,1,2)='US'
   
   
-Getting rid of duplicates
+## Getting rid of duplicates
 
 SELECT
   DISTINCT customer_id
@@ -54,7 +54,7 @@ FROM
 WHERE
   LENGTH(state)>2
   
-#TRIM Function- 
+## TRIM Function- 
 
 SELECT
   DISTINCT customer_id
@@ -72,7 +72,7 @@ ORDER BY
   country
   
   
-#CAST function- converting anything from one data type to another 
+## CAST function- converting anything from one data type to another 
 
 SELECT
   CAST(purchase_price AS FLOAT64)
@@ -90,7 +90,7 @@ WHERE
   date BETWEEN '2020-12-01' AND '2020-12-31'
   
   
-#CONCAT Function- Adding strings together to create new text strings that can be used as unique keys 
+## CONCAT Function- Adding strings together to create new text strings that can be used as unique keys 
 
 SELECT
   CONCAT(product_code, prodcut_color) AS new_product_code
@@ -99,7 +99,7 @@ FROM
 WHERE
   product = 'couch'
 
-#COALESCE Function- Return non-null values in a list
+## COALESCE Function- Return non-null values in a list
 
 SELECT
   COALESCE(product, product_code) AS product_info
@@ -107,7 +107,7 @@ FROM
   customer_data.customer_purchase
 
 
-#CASE Function- 
+## CASE Function- 
 
 SELECT
   customer_id, 
@@ -120,7 +120,7 @@ FROM
     customer_data.customer_name
     
 
-##Changelog##
+## Changelog ##
 Query history 
 
 
