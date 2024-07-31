@@ -1,3 +1,11 @@
+### Employee
+Given a table STATION that holds data for five fields namely employee_id, name, months, salary.
+|  Field | Type |
+|---|---|
+| EMPLOYEE_ID | INTEGER   |
+| NAME  | STRING  |
+| MONTHS |  INTEGER |
+| SALARY | INTEGER |
 
 1. Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
 
